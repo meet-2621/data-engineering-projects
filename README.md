@@ -1,96 +1,46 @@
+# Data Engineering Projects
 
-Data Engineering Projects
-A collection of hands-on Data Engineering projects exploring data modeling, ETL pipelines, cloud data platforms, and workflow orchestration using Python, SQL, Apache Spark, Apache Airflow, PostgreSQL, Apache Cassandra, and AWS.
+![](https://github.com/san089/Udacity-Data-Engineering-Projects/blob/master/image.jpeg)
 
-Project note: This repository is based on a collection of Udacity Data Engineering learning projects. Review the original source and license, and add appropriate attribution before publishing. Update this README to reflect any changes you personally make.
+## Project 1: Data Modeling with Postgres
+In this project, we apply Data Modeling with Postgres and build an ETL pipeline using Python. A startup wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. Currently, they are collecting data in json format and the analytics team is particularly interested in understanding what songs users are listening to.
 
-Projects Included
-1. Data Modeling with PostgreSQL
-Build a relational database and ETL pipeline for a music streaming use case. The project organizes song and user activity data into tables for analysis.
+Link: [Data_Modeling_with_Postgres](https://github.com/san089/Udacity-Data-Engineering-Projects/tree/master/Data_Modeling_with_Postgres)
 
-Key technologies: Python, PostgreSQL, SQL, ETL
+## Project 2: Data Modeling with Cassandra
+In this project, we apply Data Modeling with Cassandra and build an ETL pipeline using Python. We will build a Data Model around our queries that we want to get answers for. 
+For our use case we want below answers: 
 
-2. Data Modeling with Apache Cassandra
-Model music-app activity data in Cassandra, designing tables around specific query requirements.
+ - Get details of a song that was herad on the music app history during a particular session. 
+ - Get songs played by a user during particular session on music app. 
+  - Get all users from the music app history who listened to a particular song.
 
-Key technologies: Python, Apache Cassandra, NoSQL
+Link : [Data_Modeling_with_Apache_Cassandra](https://github.com/san089/Udacity-Data-Engineering-Projects/tree/master/Data_Modeling_with_Apache_Cassandra)
 
-3. Data Warehouse on AWS
-Load song metadata and user activity logs from Amazon S3 into an Amazon Redshift data warehouse for analytical queries.
+## Project 3: Data Warehouse
+In this project, we apply the Data Warehouse architectures we learnt and build a Data Warehouse on AWS cloud. We build an ETL pipeline to extract and transform data stored in json format in s3 buckets and move the data to Warehouse hosted on Amazon Redshift. 
 
-Key technologies: Python, SQL, Amazon S3, Amazon Redshift, ETL
+Use Redshift IaC script - [Redshift_IaC_README](https://github.com/san089/Udacity-Data-Engineering-Projects/blob/master/Redshift_IaC_README.md)
 
-4. Data Lake with Apache Spark
-Read JSON song and event data from S3, transform it with Spark, and write analytics-ready data back to S3 in columnar Parquet format.
+Link  - [Data_Warehouse](https://github.com/san089/Udacity-Data-Engineering-Projects/tree/master/Data_Warehouse)
 
-Key technologies: Python, Apache Spark, AWS S3, Amazon EMR, Parquet
+## Project 4: Data Lake
+In this project, we will build a Data Lake on AWS cloud using Spark and AWS EMR cluster. The data lake will serve as a Single Source of Truth for the Analytics Platform. We will write spark jobs to perform ELT operations that picks data from landing zone on S3 and transform and stores data on the S3 processed zone.
 
-5. Data Pipelines with Apache Airflow
-Orchestrate ETL workflows with Airflow DAGs and custom operators for staging data, loading fact and dimension tables, and running data-quality checks.
+Link: [Data_Lake](https://github.com/san089/Udacity-Data-Engineering-Projects/tree/master/Data_Lake)
 
-Key technologies: Python, Apache Airflow, Amazon Redshift, SQL
+## Project 5: Data Pipelines with Airflow
+In this project, we will orchestrate our Data Pipeline workflow using an open-source Apache project called Apache Airflow. We will schedule our ETL jobs in Airflow, create project related custom plugins and operators and automate the pipeline execution. 
 
-6. API Data to PostgreSQL
-Fetch business data from an API and load the results into a PostgreSQL database for querying and analysis.
+Link:  [Airflow_Data_Pipelines](https://github.com/san089/Udacity-Data-Engineering-Projects/tree/master/Airflow_Data_Pipelines)
 
-Key technologies: Python, REST API, PostgreSQL, ETL
+## Project 6: Api Data to Postgres
+In this project, we build an etl pipeline to fetch data from yelp API and insert it into the Postgres Database. This project is a very basic example of fetching real time data from an open source API.
 
-7. AWS Infrastructure and Services
-Supporting scripts and documentation for AWS services and infrastructure setup, including Redshift and Airflow-related resources.
+Link: [API to Postgres](https://github.com/san089/Udacity-Data-Engineering-Projects/tree/master/Data_Api_to_Postgres)
 
-Key technologies: AWS, CloudFormation, Python
-
-Technology Stack
-Programming: Python
-Databases: PostgreSQL, Apache Cassandra, Amazon Redshift
-Data processing: Apache Spark, PySpark
-Workflow orchestration: Apache Airflow
-Cloud: Amazon Web Services (AWS), including S3, EMR, and Redshift
-Data formats: JSON, Parquet
-Concepts: ETL/ELT, data modeling, data lakes, data warehousing, data pipelines, data quality
-Repository Structure
-.
-├── AWS_Services/
-├── Airflow_Data_Pipelines/
-├── Data_Api_to_Postgres/
-├── Data_Lake/
-├── Data_Modeling_with_Apache_Cassandra/
-├── Data_Modeling_with_Postgres/
-├── Data_Warehouse/
-├── Airflow_CloudFormation.yaml
-├── Redshift_Cluster_IaC.py
-└── README.md
-The repository may also contain supporting configuration files, setup notes, and project assets.
-
-Getting Started
-Clone the repository:
-
-git clone https://github.com/YOUR-USERNAME/data-engineering-projects.git
-cd data-engineering-projects
-Choose a project folder and read its README or setup instructions.
-
-Install the dependencies required by that individual project.
-
-Configure your local database or AWS resources as described in the project documentation.
-
-Run the scripts or workflows using the instructions provided for that project.
-
-Requirements differ by project, so there is no single command that runs the entire repository.
-
-Security Notes
-Never commit AWS access keys, database passwords, API tokens, private keys, or other secrets.
-Keep credentials in environment variables or a local configuration file excluded through .gitignore.
-Use placeholders in example configuration files.
-Review all files before pushing to GitHub, especially configuration files and notebooks.
-Learning Outcomes
-These projects provide practice with:
-
-Building ETL and ELT pipelines
-Designing relational and NoSQL data models
-Processing large datasets with Spark
-Building cloud-based data lakes and warehouses
-Orchestrating scheduled workflows with Airflow
-Integrating API data with databases
-Understanding data quality and cloud infrastructure
-Attribution
-This repository is intended for learning and practice. If you are using or adapting an existing project collection, preserve its original license and attribution requirements. Add your own implementation details, improvements, and learnings so visitors can distinguish your contributions from the original work.
+## CAPSTONE PROJECT
+Udacity provides their own crafted Capstone project with dataset that include data on immigration to the United States, and supplementary datasets that include data on airport codes, U.S. city demographics, and temperature data.
+  
+I worked on my own open-ended project. <br />
+Here is the link - [goodreads_etl_pipeline](https://github.com/san089/goodreads_etl_pipeline)
